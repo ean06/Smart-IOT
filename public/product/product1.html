@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart IOT</title>
+    <!-- Icon -->
+    <link rel="icon" href="../../img/icon.png">
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Alpain JS -->  
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+</head>
+    <nav  class="py-5 px4" x-data="{navOpen : false}" >
+        <div class="container mx-auto">
+            <div class="flex justify-between px-2 md:hidden">
+                <h1 class="font-bold text-3xl">Smart <span class="text-hijau font-bold ">IOT</span></h1>
+                <img @click="navOpen = ! navOpen" class="cursor-pointer" src="../../img/nav4.svg" alt="">
+            </div>
+        </div>
+        <div x-show="navOpen" class=" shadow-xl bg-biru md:hidden right-0 pl-5 py-3 rounded-lg absolute " >
+            <ul class="">
+                <li class="mr-5">
+                    <a href="../index.html" class=" block text-hijau">Home</a>
+                </li>
+                <div x-data="{ openProduct: false }"  class="relative ">
+                    <li @click="openProduct = ! openProduct" class="text-bg hover:text-bg cursor-pointer">Product </li>
+                    <div x-show="openProduct"
+                        class="absolute  right-0 w-56 py-1 mr-28 -mt-6  bg-gray-100 rounded-md shadow-xl">
+                            <a href="product1.html"class="block px-4 py-2 text-sm hover:bg-bg text-biru">Weather Station</a>
+                            <a href="product2.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Air Quality Monitoring</a>
+                            <a href="product3.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Smart City: Disaster Early Warning</a>
+                            <a href="product4.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Water Level Radar</a>
+                            <a href="product5.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Smart Parking</a>
+                            <a href="product6.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Building Automation System</a>
+                            <a href="product7.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Electricity Transformer Monitoring</a>
+                            <a href="product8.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Electricity Smart Metering</a>
+                            <a href="product9.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Telco BTS Remote Monitoring</a>
+                            <a href="product10.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Weighing Bridge Remote Monitoring</a>
+                            <a href="product11.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Tank Gauge Realtime Monitoring</a>
+                            <a href="product12.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Connected Car</a>
+                    </div>
+                </div>
+                <li class="mr-5">
+                    <a href="../about.html" class="text-hijau hover:text-bg">About Us</a>
+                </li>
+                <li class="mr-5">
+                    <a href="../contact.html" class="text-hijau hover:text-bg">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="md:block justify-center md:px-8" hidden>
+        <div class="container mx-auto">
+            <div class="flex justify-between px-2 ">
+                <h1 class="font-bold text-3xl">Smart <span class="text-hijau font-bold ">IOT</span></h1>
+                <ul class="flex justify-between gap-4 mr-24">
+                    <li><a href="../index.html" class="hover:text-hijau">Home</a></li>
+                    <div x-data="{ openProduct: false }" @mouseleave="openProduct = false" class="relative">
+                        <li @mouseover="openProduct = true" class="cursor-pointer text-hijau">Product</li>
+                        <div x-show="openProduct"
+                            @mouseover="openProduct = true"
+                            x-transition:enter.duration.500ms
+                            x-transition:leave.duration.800ms
+                            class="absolute left-0 w-72 py-1  mt-2  bg-gray-100 rounded-md shadow-xl">
+                            <a href="product1.html"class="block px-4 py-2 text-sm hover:bg-bg text-biru">Weather Station</a>
+                            <a href="product2.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Air Quality Monitoring</a>
+                            <a href="product3.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Smart City: Disaster Early Warning</a>
+                            <a href="product4.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Water Level Radar</a>
+                            <a href="product5.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Smart Parking</a>
+                            <a href="product6.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Building Automation System</a>
+                            <a href="product7.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Electricity Transformer Monitoring</a>
+                            <a href="product8.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Electricity Smart Metering</a>
+                            <a href="product9.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Telco BTS Remote Monitoring</a>
+                            <a href="product10.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Weighing Bridge Remote Monitoring</a>
+                            <a href="product11.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Tank Gauge Realtime Monitoring</a>
+                            <a href="product12.html"class="block px-4 py-2 text-sm text-hijau hover:bg-bg hover:text-biru">Connected Car</a>
+                        </div>
+                    </div>
+                    <li><a href="../about.html" class="hover:text-hijau">About Us</a></li>
+                </ul>
+                <button class="bg-hijau hover:bg-hover px-5 py-2 text-white rounded-full shadow-xl" ><a href="../contact.html">Contact Us</a></button>
+            </div>
+        </div>
+    </nav>
+<!-- =================================================================================================== -->
+        <div class="mx-auto md:mt-32">
+            <img class=" md:float-right md:ml-11 md:mr-10 mx-auto md:hidden" src="../../img/product/weather station.jpg" width="250px" height="250px" alt="">        
+            <img class=" md:float-right md:ml-11 md:mr-10 mx-auto hidden md:block lg:-mt-10 lg:mr-36" src="../../img/product/weather station.jpg" width="350px" height="350px" alt="">        
+            <div class=" mx-auto  mt-11 md:ml-10 lg:ml-0 ">
+                <h1 class="text-biru font-bold text-2xl  mb-5 text-center md:text-left md:ml-5 md:text-3xl lg:ml-36 lg:text-4xl">Weather Station</h1>
+                <p class="  text-biru text-sm mx-5 sm:10 text-justify md:text-lg lg:ml-36">A water station is a place where people can fill up with drinking water or get clean drinking water, usually by using a water dispenser. This is important to ensure easy access to safe and clean drinking water for the community. Water stations can operate commercially or as public facilities.</p>
+            </div>
+            <div class="bg-abu h-[380px] md:h-[380px] max-w-full md:mt-52 lg:h-[300px]">
+                <h1 class="text-biru font-bold text-2xl mt-10 pt-7  text-center md:text-3xl lg:text-4xl ">How It Works</h1>
+                <p class="  text-biru text-sm mx-5 sm:10 mt-5 text-justify md:ml-10  md:mr-10 md:text-lg lg:mx-36">A water station is a facility that provides people with access to safe and clean drinking water. This facility is connected to a water source that has been processed and filtered. Inside is a water dispenser that allows users to fill their own bottles. Water stations may operate commercially with payment for drinking water, as well as undergoing routine maintenance such as cleaning dispensers and changing filters. Some water stations are equipped with water quality monitoring systems to ensure the safety of drinking water. This is an important effort to ensure easy and affordable access to safe drinking water, especially in places with limited access.</p>
+            </div>
+        </div>
+    <div class="fixed bottom-0 w-full bg-hijau">
+        <p class="text-center text-sm py-1 text-white" >&copy; All Rights Reserved | Raihan Fadilah 2023</p>
+    </div>
+</body>
+</html>
